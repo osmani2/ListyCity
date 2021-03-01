@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/add_city_field"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="8"
+            app:layout_constraintEnd_toStartOf="@+id/add_province_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
+
+        <EditText
+            android:id="@+id/add_province_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="7"
+            app:layout_constraintEnd_toStartOf="@+id/add_city_button"
+            app:layout_constraintStart_toEndOf="@+id/add_city_field"
+            app:layout_constraintTop_toTopOf="parent"></EditText>
+
+        <Button
+            android:id="@+id/add_city_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add City"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_province_edit_text"
+            app:layout_constraintTop_toTopOf="parent"></Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/city_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>
